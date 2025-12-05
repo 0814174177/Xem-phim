@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%; /* Đảm bảo html và body phủ hết chiều cao */
+  margin: 0;
+  padding: 0;
+  background-color: #141414; /* Màu nền đen/tối bạn muốn dùng */
+  color: white; /* Chữ màu trắng để dễ nhìn */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.none-border {
+  border: none;
+  background-color: none;
+}
+.no-result {
+  /* Căn giữa màn hình/container */
+  text-align: center;
+  margin: 40px auto;
+
+  /* Tạo khung thông báo */
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 8px;
+
+  /* Màu sắc & Hiệu ứng trên nền đen */
+  background-color: rgba(255, 255, 255, 0.05); /* Nền trắng cực mờ */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Viền mỏng mờ */
+  color: #fff; /* Chữ trắng */
+
+  /* Typography */
+  font-size: 1.2rem;
+  font-weight: 300; /* Chữ mảnh cho sang trọng */
+  letter-spacing: 1px; /* Giãn chữ nhẹ */
+}
+
+/* Thêm hiệu ứng báo lỗi nhẹ (nếu muốn nhấn mạnh) */
+.no-result::before {
+  content: "⚠️ "; /* Thêm icon cảnh báo bằng emoji hoặc dùng FontAwesome */
+  font-size: 1.4rem;
+}

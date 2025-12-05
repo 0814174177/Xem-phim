@@ -1,0 +1,72 @@
+.detail {
+  display: flex; /* Sử dụng Flexbox để chia cột */
+  justify-content: space-between; /* Căn đều khoảng cách giữa 2 cột */
+  align-items: center; /* Căn hàng ở phía trên cùng */
+  background-color: #000; /* Màu nền đen tuyền như trong ảnh */
+  color: #fff; /* Màu chữ trắng */
+  padding: 20px; /* Khoảng cách đệm xung quanh nội dung */
+  gap: 40px; /* Khoảng cách giữa cột text và cột video */
+  width: 100%;
+  box-sizing: border-box; /* Đảm bảo padding không làm vỡ layout */
+}
+
+/* --- CỘT BÊN TRÁI: Thông tin phim --- */
+
+/* Chọn thẻ div đầu tiên bên trong .detail (chứa text) */
+.detail > div:first-child {
+  flex: 2; /* Chiếm khoảng 40% chiều rộng (tỉ lệ 2/5) */
+}
+
+/* Tiêu đề phim */
+.detail h1 {
+  font-size: 2.5rem; /* Kích thước chữ lớn */
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+/* Đường kẻ ngang */
+.detail hr {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.3); /* Đường kẻ trắng mờ */
+  margin-bottom: 20px;
+}
+
+/* Các đoạn văn bản (Ngày phát hành, Vote, Mô tả) */
+.detail p {
+  font-size: 1rem;
+  line-height: 1.6; /* Tăng khoảng cách dòng cho dễ đọc */
+  margin-bottom: 15px;
+}
+
+/* Phần chữ đậm (Release Date, Vote) */
+.detail p strong {
+  font-weight: 600;
+  color: #ddd; /* Màu trắng hơi xám nhẹ để tạo điểm nhấn phụ */
+}
+
+/* --- CỘT BÊN PHẢI: Video --- */
+
+/* Chọn thẻ div thứ hai bên trong .detail (chứa video/ảnh) */
+.detail > div:last-child {
+  flex: 3; /* Chiếm khoảng 60% chiều rộng (tỉ lệ 3/5) */
+  width: 100%; /* Đảm bảo nó lấp đầy không gian flex được chia */
+}
+
+/* Tùy chỉnh iframe của YouTube để nó responsive */
+/* Lưu ý: Component YouTube thường tự sinh ra thẻ div bọc ngoài iframe, 
+   class này giúp đảm bảo video co giãn tốt */
+.detail > div:last-child > div,
+.detail iframe {
+  width: 100% !important; /* Bắt buộc chiều rộng 100% theo container cha */
+  display: block;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Thêm chút bóng đổ cho video nổi bật */
+}
+
+/* CSS cho ảnh fallback nếu không có video */
+.detail img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}

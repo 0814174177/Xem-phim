@@ -1,0 +1,62 @@
+.img-banner {
+  width: 100vh;
+  height: auto;
+}
+/* Banner.module.css */
+
+.banner {
+  color: white; /* Chữ màu trắng toàn bộ */
+  object-fit: contain;
+  height: 448px; /* Chiều cao cố định cho banner (hoặc 60vh - 80vh tùy bạn) */
+
+  /* Sử dụng Flexbox để căn nội dung */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Căn giữa theo chiều dọc (Vertical Center) */
+}
+
+.banner__contents {
+  position: relative;
+  bottom: 500px;
+  margin-left: 30px; /* Căn cách lề trái 30px */
+  padding-top: 140px; /* Đẩy nội dung xuống một chút nếu bị vướng header trên cùng */
+  height: 190px; /* Chiều cao vùng chứa nội dung */
+  max-width: 500px; /* Giới hạn chiều rộng để chữ không tràn hết màn hình */
+}
+
+.banner__title {
+  font-size: 3rem;
+  font-weight: 800;
+  padding-bottom: 0.3rem;
+}
+
+.banner__description {
+  width: 45rem;
+  line-height: 1.3;
+  padding-top: 1rem;
+  font-size: 0.8rem;
+  max-width: 360px;
+  height: 80px;
+  font-weight: bold;
+}
+
+.banner__button {
+  cursor: pointer;
+  color: #fff;
+  outline: none;
+  border: none;
+  font-weight: 700;
+  border-radius: 0.2vw;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background-color: rgba(51, 51, 51, 0.5); /* Nền nút hơi trong suốt */
+}
+
+.banner__button:hover {
+  color: #000;
+  background-color: #e6e6e6;
+  transition: all 0.2s;
+}

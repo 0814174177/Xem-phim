@@ -1,0 +1,84 @@
+.search-form {
+  background-color: white;
+  width: 100%;
+  max-width: 600px; /* Giới hạn chiều rộng giống ảnh */
+  margin: 50px auto;
+  padding: 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+/* 2. Input Wrapper - Phần nhập liệu và icon */
+.search-input-wrapper {
+  display: flex;
+  justify-content: space-between; /* Đẩy input sang trái, icon sang phải */
+  align-items: center;
+  border-bottom: 2px solid #00bcd4; /* Đường kẻ màu xanh Cyan */
+  padding-bottom: 10px;
+  margin-bottom: 50px; /* Khoảng cách lớn xuống nút bấm */
+}
+
+/* Style cho thẻ Input */
+.search-input-wrapper input {
+  border: none;
+  outline: none;
+  font-size: 24px; /* Chữ to */
+  color: #333;
+  width: 100%;
+  font-weight: 300;
+}
+
+/* Placeholder màu xám nhạt */
+.search-input-wrapper input::placeholder {
+  color: #aaa;
+}
+
+/* Style cho Icon Kính lúp (Magnifier) */
+.search-icon {
+  width: 30px;
+  height: 30px;
+  color: #aaa; /* Màu xám cho icon */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 3. Control Buttons - Phần nút bấm */
+.control-buttons {
+  display: flex;
+  justify-content: flex-end; /* Căn phải */
+  align-items: center;
+  gap: 20px; /* Khoảng cách giữa 2 nút */
+}
+
+/* Style chung cho cả 2 nút */
+.control-buttons button {
+  border: none;
+  background: none;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase; /* Chữ in hoa */
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+}
+
+/* Riêng nút RESET */
+.control-buttons button[type="reset"] {
+  color: #666;
+}
+.control-buttons button[type="reset"]:hover {
+  color: #333;
+}
+
+/* Riêng nút SEARCH */
+.control-buttons button[type="submit"] {
+  background-color: #00bcd4; /* Màu nền xanh Cyan */
+  color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.control-buttons button[type="submit"]:hover {
+  background-color: #00acc1; /* Đậm hơn chút khi hover */
+}

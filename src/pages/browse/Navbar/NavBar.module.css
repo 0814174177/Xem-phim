@@ -1,0 +1,14 @@
+.form {
+  position: sticky; /* Khai báo kiểu dính */
+  top: 0; /* Dính chặt vào mép trên cùng (cách 0px) */
+  z-index: 1000; /* Đảm bảo navbar luôn nổi lên trên các nội dung khác */
+  display: flex; /* Đẩy 2 phần tử con ra xa nhau hết mức có thể */
+  justify-content: space-between; /* Căn giữa 2 phần tử theo chiều dọc (để không bị lệch trên/dưới) */
+  align-items: center;
+}
+.navbar {
+  background-color: none;
+}
+.navbar__black {
+  background-color: #000;
+}
